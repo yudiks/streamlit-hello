@@ -54,6 +54,5 @@ elif classification_space == "French":
 # for language codes have a look at https://cloud.google.com/translate/docs/languages
 # complete the language translation option for spanish, german and french
 if st.button('Translate'):
-    # Translate
-    translatedText = argostranslate.translate.translate(text, from_code, option)
+    translatedText = argostranslate.translate.translate(text, from_code, to_code)
     st.write(translatedText)
