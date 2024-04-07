@@ -12,22 +12,13 @@ text = st.text_input("Enter input:", "")
 
 cs = ["Chinese", "Spanish", "Greman", "French"] 
 classification_space = st.sidebar.selectbox("Language to be translated into:", cs)
-# option = ''
 
 # install argostranslate
 from_code = "en"
-# to_code = "es"
-# argostranslate.package.update_package_index()
-# available_packages = argostranslate.package.get_available_packages()
-# package_to_install = next(
-#     filter(
-#         lambda x: x.from_code == from_code and x.to_code == to_code, available_packages
-#     )
-# )
-# argostranslate.package.install_from_path(package_to_install.download())
+argostranslate.package.update_package_index()
+available_packages = argostranslate.package.get_available_packages()
 
 if classification_space == "Chinese":
-    # option = 'zh'
     to_code = 'zh'
     package_to_install = next(
         filter(
@@ -36,7 +27,6 @@ if classification_space == "Chinese":
     )
     argostranslate.package.install_from_path(package_to_install.download())
 elif classification_space == "Spanish":
-    # option = 'es'
     to_code = 'es'
     package_to_install = next(
         filter(
@@ -45,7 +35,6 @@ elif classification_space == "Spanish":
     )
     argostranslate.package.install_from_path(package_to_install.download())
 elif classification_space == "Greman":
-    # option = 'de'
     to_code = 'de'
     package_to_install = next(
         filter(
@@ -54,7 +43,6 @@ elif classification_space == "Greman":
     )
     argostranslate.package.install_from_path(package_to_install.download())
 elif classification_space == "French":
-    # option = 'fr'
     to_code = 'fr'
     package_to_install = next(
         filter(
